@@ -1,0 +1,89 @@
+#main-content-container {
+	position: relative;
+	margin-top: 5em;
+	width: 80%;
+}
+/* // for test
+#main-content-container div {
+	border: solid #d9d9d9;
+}
+*/
+#main-content-container .outline {
+	border: solid black;
+}
+h1 {
+	background-color: #d9d9d9;
+}
+
+#left-container input {
+	display: none;
+}
+#companies-list-container {
+	padding-bottom: 1em;
+}
+
+.company-display:not(:first-of-type) {
+	margin-top: 2em;
+}
+.company-display {
+	padding: 1em;
+}
+
+
+#company-details-container .company-display {
+	margin-bottom: 1em;
+}
+#companies-list-container .company-list-name,
+.clickable {
+	/* Wireframe color - contrast is too low */
+	/* color: #2bb1db; */
+	color: #122ae4;
+	cursor: pointer; 
+	cursor: hand;
+	text-decoration: underline;
+}
+
+
+.right-container-row:nth-of-type(2) {
+	margin-top: 2em;
+}
+.details-label {
+	font-weight: bold;
+}
+.btn-db-update {
+	margin: 1em 0em;
+}
+
+
+#company-selector {
+	margin-top: 1em;
+}
+
+
+#company-details-container,
+#people-list-container,
+#people-details-container {
+	display: none;
+}
+#people-list {
+    list-style-type: disc;
+    margin-left: 1em;
+}
+.person-display {
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.editor {
+	margin-bottom: 1em;
+}
+#btn-edit-company-cancel,
+#btn-edit-person-cancel {
+	display: none;
+}
+/*
+#btn-delete-company {
+	float: right;
+	display: none; 
+}
+*/

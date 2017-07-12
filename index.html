@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Reset CSS -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">		
+		<!-- My CSS -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Custom JavaScript -->
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script>
+		    
+		    $(document).ready(function () 
+		    { 
+		    	$("#btn-insert-new-company").click(function(){
+		    		/*
+		    		var obj = {
+						"name": $('#create-company-input-name').val(),
+						"address": $('#create-company-input-address').val(),
+						"revenue": $('#create-company-input-revenue').val(),
+						"phone": $('#create-company-input-phone').val()
+					};
+					addUpdateCompany(obj, "POST");
+					*/
+					createNewCompany();
+				});
+				$("#btn-insert-new-person").click(function(){
+					createNewPerson();
+				});
+
+				// Populate the companies list
+		        getCompanies();	        
+		    });
+
+		</script>
+
+
+
+	</head>
+
+	<body>
+
+		<div id="main-content-container" class="container">
+			<div class="row">
+				
+				<div id="left-container" class="col-md-6">
+
+					<div id="companies-list-container" class="col-md-12 outline">
+						<h1>Companies</h1>						
+					</div>
+				
+					<div id="company-details-container" class="col-md-12 outline">
+						<div id="company-details"></div>
+						<div class="editor">
+							<button id="btn-edit-company">Edit</button>
+							<button id="btn-edit-company-cancel">Cancel</button>
+							<!-- <button id="btn-delete-company">Delete</button> -->
+						</div>
+					</div>
+
+					<div id="people-list-container" class="col-md-12 outline">
+						<h1 id="people-list-title"></h1>
+						<ul id="people-list"></ul>
+					</div>	
+
+					<div id="people-details-container" class="col-md-12 outline">
+						<h1>Person Details</h1>
+						<div id="person-details"></div>
+						<div class="editor">
+							<button id="btn-edit-person">Edit</button>
+							<button id="btn-edit-person-cancel">Cancel</button>
+							<button id="btn-delete-person">Delete</button>
+						</div>						
+					</div>					
+
+				</div>
+
+				<div id="right-container" class="col-md-6">
+
+					<div class="right-container-row row">
+						<div class="col-md-12 outline">
+							<h1>Create new company</h1>
+							<div class="create-company-details">
+								<label for="create-company-input-name">Name:</label><br>
+								<input type="text" id="create-company-input-name"></input><br>
+								<label for="create-company-input-address">Address:</label><br>
+								<input type="text" id="create-company-input-address"></input><br>
+								<label for="create-company-input-revenue">Revenue:</label><br>
+								<input type="text" id="create-company-input-revenue"></input><br>
+								<label for="create-company-input-name">Phone:</label><br>
+								<input type="text" id="create-company-input-phone"></input>
+							</div>
+							<button id="btn-insert-new-company" class="btn-db-update" type="button">Save</button>
+						</div>
+					</div>
+
+					<div class="right-container-row row">
+						<div class="col-md-12 outline">
+							<h1>Create new person</h1>
+							<div class="create-person-details">
+								<label for="create-person-input-name">Name:</label><br>
+								<input type="text" id="create-person-input-name"></input><br>
+								<label for="create-person-input-email">Email:</label><br>
+								<input type="text" id="create-person-input-email"></input><br>
+								<label for="create-person-input-revenue">Company:</label>
+								<select id="company-selector"></select>
+							</div>
+							<button id="btn-insert-new-person" class="btn-db-update" type="button">Save</button>
+						</div>
+					</div>					
+					
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html> 

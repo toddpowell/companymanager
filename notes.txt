@@ -1,0 +1,16 @@
+Node Packages:
+> npm init
+> npm install mocha --save-dev
+> npm install chai --save-dev
+> npm install sinon --save-dev
+> npm install http-server -g
+
+MongoDB startup:
+	mongod --dbpath C:\Users\User\programming\companymanager\data\db
+
+Server startup:
+	Go to project folder
+	> http-server
+
+Go to localhost:8080
+
